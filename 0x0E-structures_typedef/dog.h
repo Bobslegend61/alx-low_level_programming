@@ -1,5 +1,5 @@
-#ifndef _DOG_LIKE_MACRO
-#define _DOG_LIKE_MACRO
+#ifndef _DOG_H_
+#define _DOG_H_
 
 /**
  * dog_t - Typedef for struct dog 
