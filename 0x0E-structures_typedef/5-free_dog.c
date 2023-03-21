@@ -1,14 +1,18 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
-* free_dog - Free the heap memory
-* @p: Memory address to free
-*/
-void free_dog (dog_t *p)
+ * free_dog - frees dogs.
+ * @d: struct dog.
+ *
+ * Return: no return.
+ */
+void free_dog(dog_t *d)
 {
-	if (p)
-		free(p);
-		p = NULL;
+	if (d)
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+	}
 }
-
