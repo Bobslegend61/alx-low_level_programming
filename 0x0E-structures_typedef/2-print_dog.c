@@ -2,10 +2,12 @@
 #include "dog.h"
 
 /**
-* print_dog - Print the values of dog struct
-* @d: The dog struct whose value should be printed
-*/
-void print_dog (struct dog* d)
+ * print_dog - Print the values of dog struct
+ * @d: The dog struct whose value should be printed
+ *
+ * Return: no return
+ */
+void print_dog(struct dog* d)
 {
 	char *nil = "(nil)";
 
@@ -16,4 +18,3 @@ void print_dog (struct dog* d)
 	printf("Name: %f\n", d->age);
 	printf("Name: %s\n", d->owner ? d->owner : nil);
 }
-
