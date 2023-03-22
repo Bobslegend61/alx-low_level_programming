@@ -2,8 +2,8 @@
 
 /**
   * print_name - Prints a name
-  * @name: Name to print
-  * @f: Function to define print format
+  * @name: name to print
+  * @f: function to define print format
   *
   * Return: Nothing
   */
