@@ -6,7 +6,7 @@
  * @size: size of the array.
  * @action: func to execute on array.
  *
- * Return: nothing.
+ * Return: Nothing.
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
