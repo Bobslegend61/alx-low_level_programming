@@ -23,6 +23,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 				break;
 			}
 	}
-	return res <= 0 ? -1 : res;
+	return (res <= 0 ? -1 : res);
 }
 
