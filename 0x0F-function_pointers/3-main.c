@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
         int num1;
         int num2;
         char *s;
+	int (*op)(int, int);
 
         if (argc != 4)
         {
@@ -23,16 +24,17 @@ int main(int argc, char *argv[])
         num2 = atoi(argv[3]);
         s = argv[2];
 
-        if (*s != '+' && *s != '-' && *s != '*' && *s != '/' && *s != '%')
-        {
-                printf("Error\n");
-                exit(99);
-        }
-
         if ((*s == '/' || *s == '%') && num2 == 0)
         {
                 printf("Error\n");
                 exit(100);
+        }
+
+	op = get_op_func(s);
+	if (op == NULL)
+        {
+                printf("Error\n");
+                exit(99);
         }
 
         printf("%d\n", (get_op_func(s)(num1, num2)));
