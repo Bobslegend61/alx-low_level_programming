@@ -10,8 +10,6 @@ void free_list(list_t *head)
 {
 	list_t *lst_head;
 
-	if (head == NULL)
-		exit(99);
 	while (head != NULL)
 	{
 		lst_head = head;
