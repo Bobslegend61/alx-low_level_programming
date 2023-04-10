@@ -8,14 +8,16 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int ans = 0;
+	unsigned int m = 0;
 	
-	if (!b || *b < '0' || *b > '1')
+	if (!b)
 		return (0);
-	while (*b)
+	while (*b != '\0')
 	{
-		ans = (ans << 1) | (*b - 48);
-		b += 1;
+		if (*b < '0' || *b > '1')
+			return (0);
+		m = (m << 1) | (*b - '0');
+		b++;
 	}
-	return (ans);
+	return (m);
 }
