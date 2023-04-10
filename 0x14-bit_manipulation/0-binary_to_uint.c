@@ -10,15 +10,10 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int ans = 0;
 	
-	if (!b)
+	if (!b || *b < '0' || *b > '1')
 		return (0);
 	while (*b)
 	{
-		if (*b < '0' || *b > '1')
-		{
-			ans = 0;
-			break;
-		}
 		ans = (ans << 1) | (*b - 48);
 		b += 1;
 	}
