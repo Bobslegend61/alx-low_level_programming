@@ -27,5 +27,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (w_count == -1 || (r_count != w_count))
 		return (0);
 	(void)close(fd);
+	free(buf);
 	return (r_count);
 }
