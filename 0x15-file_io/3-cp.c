@@ -84,6 +84,6 @@ int main(int ac, char **av)
 	c1 = close(fd1);
 	c2 = close(fd2);
 	if (c1 == -1 || c2 == -1)
-		hndl_err(100, 0, "d", c1 == -1 ? c1 : c2);
+		hndl_err(100, 0, "d", c1 == -1 ? fd1 : fd2);
 	return (0);
 }
